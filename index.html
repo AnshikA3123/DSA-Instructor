@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Instructor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h2>DSA Buddy</h2>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-comments"></i> Chat Instructor</a></li>
+                    <li><a href="#"><i class="fas fa-book-open"></i> Learn Concepts</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Progress</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40" alt="User Avatar">
+                <span>Student User</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Welcome to your DSA Learning Dashboard!</h1>
+                <div class="header-actions">
+                    <input type="text" placeholder="Search..." class="search-bar">
+                    <button class="notification-btn"><i class="fas fa-bell"></i></button>
+                    <button class="profile-menu-btn"><i class="fas fa-user-circle"></i></button>
+                </div>
+            </header>
+
+            <section class="dashboard-widgets">
+                <div class="widget total-queries">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Total Queries</h3>
+                    <p id="totalQueries">0</p>
+                </div>
+                <!-- <div class="widget correct-answers">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Correct Answers</h3>
+                    <p id="correctAnswers">0</p>
+                </div> -->
+                <div class="widget learning-streak">
+                    <i class="fas fa-fire-alt"></i>
+                    <h3>Learning Streak</h3>
+                    <p id="learningStreak">0 days</p>
+                </div>
+            </section>
+
+            <section class="chat-section">
+                <h2>DSA Instructor Chat</h2>
+                <div class="chat-window" id="chatWindow">
+                    <div class="message instructor">
+                        <p>Hello! I am your DSA Instructor. Ask me anything about Data Structures and Algorithms!</p>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="userInput" placeholder="Ask a DSA question or topic...">
+                    <button id="sendButton"><i class="fas fa-paper-plane"></i> Send</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
