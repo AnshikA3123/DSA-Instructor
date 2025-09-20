@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             
-            const backendUrl =https://dsa-instructor-50l0.onrender.com;
+            const backendUrl ="https://dsa-instructor-50l0.onrender.com";
            
 
             const response = await fetch(backendUrl, {
@@ -79,5 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
 
 
