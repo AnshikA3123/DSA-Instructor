@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 👇 Change ONLY this line when you deploy
-            const backendUrl = "http://localhost:3000/ask-dsa";
+            const backendUrl =https://dsa-instructor-50l0.onrender.com;
             // Example after deploy:
             // const backendUrl = "https://dsa-instructor-backend.onrender.com/ask-dsa";
 
@@ -78,4 +78,5 @@ document.addEventListener('DOMContentLoaded', () => {
             sendMessage();
         }
     });
+
 });
