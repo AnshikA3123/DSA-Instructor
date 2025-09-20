@@ -11,8 +11,11 @@ const port = 3000;
 
 
 app.use(express.json()); 
-app.use(cors()); 
-
+app.use(cors({
+  origin: "https://anshika3123.github.io",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
+})); 
 app.post('/ask-dsa', async (req, res) => {
     const userQuery = req.body.query;
     try {
@@ -41,3 +44,4 @@ app.listen(port, () => {
     console.log(`DSA Instructor backend listening on port ${3000}`);
 
 });
+
