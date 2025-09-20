@@ -8,12 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let learningStreak = 0;
 
     const totalQueriesElement = document.getElementById('totalQueries');
-    
     const learningStreakElement = document.getElementById('learningStreak');
 
     function updateWidgets() {
         totalQueriesElement.textContent = totalQueries;
-        
         learningStreakElement.textContent = `${learningStreak} days`;
     }
 
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message', sender);
         
-        // Split the text by newlines and create a new paragraph for each part
         const paragraphs = text.split('\n');
         paragraphs.forEach(paraText => {
             if (paraText.trim() !== '') {
@@ -41,16 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = userInput.value.trim();
         if (message === '') return;
 
-        addMessage(`👩‍💻: ${message}`, 'user');
+        addMessage(`👩‍  : ${message}`, 'user');
         userInput.value = '';
         totalQueries++;
         updateWidgets();
 
         try {
-            
-            const backendUrl ="https://dsa-instructor-50l0.onrender.com";
-           
-
+            // Updated to use deployed backend URL
+            const backendUrl = "https://dsa-instructor-50l0.onrender.com/ask-dsa";
             const response = await fetch(backendUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -77,8 +72,4 @@ document.addEventListener('DOMContentLoaded', () => {
             sendMessage();
         }
     });
-
 });
-
-
-
