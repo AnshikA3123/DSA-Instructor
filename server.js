@@ -2,7 +2,9 @@
 const express = require('express');
 const { GoogleGenAI } = require("@google/genai");
 const cors = require('cors'); 
-
+const ai = new GoogleGenAI({
+  apiKey: "AIzaSyChWLsJ8vCLyNIUZUfFpT7VkumN8TZYZCI" 
+});
 const app = express();
 const port = 3000;
 
@@ -37,4 +39,5 @@ app.post('/ask-dsa', async (req, res) => {
 
 app.listen(port, () => {
     console.log(`DSA Instructor backend listening on port ${3000}`);
+
 });
